@@ -1,0 +1,5 @@
+[user]
+	name = JoakimWellmar
+	email = joakim.vellmar@gmail.com
+[core]
+	editor = nvim
