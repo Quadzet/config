@@ -1,5 +1,25 @@
 [user]
-	name = JoakimWellmar
-	email = joakim.wellmar@pm.me
+    name = JoakimWellmar
+    email = joakim.wellmar@pm.me
 [core]
-	editor = nvim
+    autocrlf = true
+    editor = nvim
+[push]
+    default = simple
+    autoSetupRemote = true
+[diff]
+    tool = winmerge
+[difftool "winmerge"]
+    cmd = \"C:\\Users\\S2304G\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\WinMergeU.exe\" -e -u -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[difftool]
+    prompt = false
+[merge]
+    tool = winmerge
+[mergetool "winmerge"]
+    cmd = \"WinMergeU.exe\" -e -u -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[mergetool]
+    prompt = false
+[rerere]
+    enabled = true
+[alias]
+    l = log -15 --pretty=format:\"%C(yellow dim)%h %C(green dim)%<(6,trunc)%an%C(cyan bold)%d %C(white)%<(70,trunc)%s %ar ~ %N%Creset\" --graph --decorate

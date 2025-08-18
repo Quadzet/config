@@ -1,0 +1,38 @@
+let mapleader=" "
+set number
+set relativenumber
+syntax on
+set shiftwidth=4
+set background=dark
+colorscheme solarized8_flat
+set showmatch
+set laststatus=2
+set hlsearch
+set smartcase
+set autoindent
+inoremap jk <Esc>
+nnoremap <C-n> :NERDTreeToggle<CR>
+set backspace=indent,eol,start
+set termguicolors       " Use GUI colors in terminal
+let &t_ut=''            " Disable background color erase
+" Disable special highlighting for markdown underscores
+autocmd FileType markdown hi link markdownItalic Normal
+autocmd FileType markdown hi link markdownBold Normal
+autocmd FileType markdown hi link markdownError Normal
+let NERDTreeShowHidden=1
+" vim-markdown configuration
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 0
+let g:vim_markdown_conceal_code_blocks = 0
+nnoremap <Leader>s :w<CR>
+nnoremap <Leader>y "+y
+nnoremap <Leader>Y "+Y
+nnoremap <Leader>p "+p
+nnoremap <Leader>P "+P
+vnoremap <Leader>y "+y
+vnoremap <Leader>Y "+Y
+vnoremap <Leader>p "+p
+vnoremap <Leader>P "+P
+nnoremap <Leader>s :w<CR>
+
+
