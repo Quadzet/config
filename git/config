@@ -2,7 +2,7 @@
     name = JoakimWellmar
     email = joakim.wellmar@pm.me
 [core]
-    autocrlf = true
+    autocrlf = input
     editor = nvim
 [push]
     default = simple
