@@ -1,5 +1,5 @@
 ## What is this?
-Some of my personal settings and scripts, intended for Arch Linux.
+Some of my personal settings and scripts, intended for Arch Linux.  
 There is also an outdated script to install them on windows 11.
 
 ## Setup
@@ -13,7 +13,7 @@ such as LSP's, linters/formatters and other plugins in it's
 own config in nvim/init.lua and nvim/lua/*.
 
 Vim requires the .bashrc to source from the correct directory
-(~/.config/vim) instead of the default (~/).
+(\~/.config/vim) instead of the default (\~/).
 
 The git config has some personal settings but is generally
 just for minor conveniences such as aliases.
