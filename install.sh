@@ -45,19 +45,19 @@ get_user_choice() {
 
     read -r choice
     case "$choice" in
-        s|S)
-            return 0  # Skip
-            ;;
-        o|O)
-            return 1  # Overwrite
-            ;;
-        b|B)
-            return 2  # Backup
-            ;;
-        *)
-            print_error "Invalid choice. Skipping by default."
-            return 0
-            ;;
+    s | S)
+        return 0 # Skip
+        ;;
+    o | O)
+        return 1 # Overwrite
+        ;;
+    b | B)
+        return 2 # Backup
+        ;;
+    *)
+        print_error "Invalid choice. Skipping by default."
+        return 0
+        ;;
     esac
 }
 
@@ -83,21 +83,21 @@ install_config() {
         local choice=$?
 
         case $choice in
-            0)  # Skip
-                print_info "Skipping $config_name"
-                return 0
-                ;;
-            1)  # Overwrite
-                print_info "Removing existing $config_name..."
-                rm -rf "$dest_dir"
-                ;;
-            2)  # Backup
-                local timestamp=$(date +%Y%m%d_%H%M%S)
-                local backup_name="${dest_dir}.backup.${timestamp}"
-                print_info "Backing up existing config to: ${backup_name}"
-                mv "$dest_dir" "$backup_name"
-                print_success "Backup created"
-                ;;
+        0) # Skip
+            print_info "Skipping $config_name"
+            return 0
+            ;;
+        1) # Overwrite
+            print_info "Removing existing $config_name..."
+            rm -rf "$dest_dir"
+            ;;
+        2) # Backup
+            local timestamp=$(date +%Y%m%d_%H%M%S)
+            local backup_name="${dest_dir}.backup.${timestamp}"
+            print_info "Backing up existing config to: ${backup_name}"
+            mv "$dest_dir" "$backup_name"
+            print_success "Backup created"
+            ;;
         esac
     fi
 
@@ -113,7 +113,7 @@ get_all_configs() {
     local configs=()
 
     # Find all directories in repo root, excluding hidden dirs
-    for dir in "$REPO_DIR"/*/ ; do
+    for dir in "$REPO_DIR"/*/; do
         if [[ -d "$dir" ]]; then
             local basename=$(basename "$dir")
             if [[ ! "$basename" =~ ^\. ]]; then
@@ -124,7 +124,6 @@ get_all_configs() {
 
     echo "${configs[@]}"
 }
-
 
 main() {
     if [[ $# -eq 0 ]]; then
@@ -158,9 +157,9 @@ main() {
 
         for config in "${configs[@]}"; do
             if install_config "$config"; then
-                ((success_count++))
+                success_count=$((success_count + 1))
             else
-                ((error_count++))
+                error_count=$((error_count + 1))
             fi
             echo ""
         done
