@@ -1,3 +1,6 @@
+set runtimepath^=~/.config/vim
+set runtimepath+=~/.config/vim/after
+
 let mapleader=" "
 let maplocalleader=" "
 let g:have_nerd_font = 1
