@@ -79,8 +79,10 @@ install_config() {
 
     # Check if destination already exists
     if [[ -e "$dest_dir" ]]; then
+	set +e
         get_user_choice "$config_name" "$dest_dir"
         local choice=$?
+	set -e
 
         case $choice in
         0) # Skip
