@@ -49,6 +49,8 @@ vnoremap <Leader>Y "+Y
 vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 vnoremap <Leader>s :w<CR>
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " Only load in Vim, not NeoVim
 if !has('nvim')
