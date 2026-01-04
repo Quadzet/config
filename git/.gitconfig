@@ -8,17 +8,14 @@
     default = simple
     autoSetupRemote = true
 [diff]
-    tool = winmerge
-[difftool "winmerge"]
-    cmd = \"C:\\Users\\S2304G\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Scoop Apps\\WinMergeU.exe\" -e -u -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+    tool = vimdiff
 [difftool]
     prompt = false
 [merge]
-    tool = winmerge
-[mergetool "winmerge"]
-    cmd = \"WinMergeU.exe\" -e -u -dl \"Base\" -dr \"Mine\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+    tool = vimdiff
 [mergetool]
     prompt = false
+    keepBackup = false
 [rerere]
     enabled = true
 [alias]
