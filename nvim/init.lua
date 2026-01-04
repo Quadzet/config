@@ -1,8 +1,6 @@
 -- Use Vim's config
-vim.opt.runtimepath:prepend '~/.vim'
-vim.opt.runtimepath:append '~/.vim/after'
 vim.opt.packpath = vim.opt.runtimepath:get()
-vim.cmd.source '~/.vimrc'
+vim.cmd.source '~/.config/vim/vimrc'
 
 -- Neovim specific settings
 vim.opt.signcolumn = 'yes'
