@@ -20,3 +20,4 @@
     enabled = true
 [alias]
     l = log -15 --pretty=format:\"%C(yellow dim)%h %C(green dim)%<(6,trunc)%an%C(cyan bold)%d %C(white)%<(70,trunc)%s %ar ~ %N%Creset\" --graph --decorate
+    st = status -bs
