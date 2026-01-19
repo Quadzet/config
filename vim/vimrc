@@ -65,4 +65,10 @@ if !has('nvim')
 	call minpac#add('junegunn/fzf')
 	call minpac#add('tpope/vim-dispatch')
 	call minpac#add('tpope/vim-scriptease', {'type': 'opt'})
+	call minpac#add('altercation/vim-colors-solarized')
+
+	syntax on
+	set termguicolors
+	set background=dark
+	colorscheme solarized
 endif

@@ -1,3 +1,5 @@
+
+
 ## What is this?
 Some of my personal settings and scripts, intended for Arch Linux.
 There is also an outdated script to install them on windows 11.
